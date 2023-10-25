@@ -80,6 +80,16 @@ async function resetDatabase() {
         ('Scratch Link', 'https://scratch.mit.edu/', TRUE, 2);
     `);
 
+// Seed the comments table
+await pool.query(`
+
+INSERT INTO comments (comment,added_date,workshop_id)
+VALUES
+('I found this really helpful', '2023-10-25', 1),
+('This looks really good !', '2023-10-25', 1),
+('This is a very good example!', '2023-10-25', 1);
+`);
+
     console.log("Database reset successful");
   } catch (error) {
     console.error("Database reset failed: ", error);
