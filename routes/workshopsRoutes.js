@@ -6,7 +6,7 @@ export const workshopsRoutes = express.Router();
 
 workshopsRoutes.get("/", workshopsController.getWorkshops);
 
-// workshopsRoutes.get("/:id", workshopsController.getResponseById);
+workshopsRoutes.get("/:id", workshopsController.getWorkshopById);
 
 // workshopsRoutes.post("/", workshopsController.createResponse);
 

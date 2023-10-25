@@ -5,17 +5,17 @@ export async function getWorkshops(req, res) {
   res.status(200).json({ status: "success", data: workshops });
 }
 
-// export async function getResponseById(req, res) {
-//   const id = req.params.id;
-//   const response = await workshopsModel.getResponseById(id);
-//   // Assume 404 status if the response is not found
-//   if (!response) {
-//     return res
-//       .status(404)
-//       .json({ status: "fail", data: { msg: "Response not found" } });
-//   }
-//   res.status(200).json({ status: "success", data: response });
-// }
+export async function getWorkshopById(req, res) {
+  const id = req.params.id;
+  const response = await workshopsModel.getWorkshopById(id);
+  // Assume 404 status if the response is not found
+  if (!response) {
+    return res
+      .status(404)
+      .json({ status: "fail", data: { msg: "Response not found" } });
+  }
+  res.status(200).json({ status: "success", data: response });
+}
 
 // export async function createResponse(req, res) {
 //   const data = req.body;
