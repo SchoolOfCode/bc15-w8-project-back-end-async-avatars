@@ -108,7 +108,31 @@ export async function resetDatabase() {
         VALUES
         ('Github Repo', 'https://classroom.github.com/a/ElP3Fc9C', FALSE, 1),
         ('Hackathon Repo', 'https://classroom.github.com/assignment-invitations/3fbdc8e4f8e580a676471e598d77ea92/status', FALSE, 2),
-        ('Scratch Link', 'https://scratch.mit.edu/', TRUE, 2);
+        ('Scratch Link', 'https://scratch.mit.edu/', TRUE, 2),
+        ('Github Repo', 'https://classroom.github.com/assignment-invitations/a07a0a01cd8851bcc1f7906537b2524e/status', FALSE, 3),
+        ('Github Repo', 'https://classroom.github.com/a/SsLRxarN', FALSE, 4),
+        ('Github Repo', 'https://classroom.github.com/a/HNOpMWtV', FALSE, 5),
+        ('Github Repo', 'https://classroom.github.com/a/21V5lQcj', FALSE, 6),
+        ('Github Repo', 'https://classroom.github.com/assignment-invitations/9523fd5b295d78a31b1d01fa17f8c4f0/status', FALSE, 7),
+        ('Github Repo', 'https://classroom.github.com/assignment-invitations/2f26c6116c3374969c3400971398de95/status', FALSE, 8),
+        ('Github Repo', 'https://classroom.github.com/assignment-invitations/6cb82afecbe9a647e8abf0c9ab4fffc4/status', FALSE, 9),
+        ('Github Repo', 'https://classroom.github.com/assignment-invitations/70b56cb13cccf23d643a8f985e2f0173/status', FALSE, 10),
+        ('Github Repo', 'https://classroom.github.com/assignment-invitations/88363357e367ec6d0ff1d6825a70dddc/status', FALSE, 11),
+        ('Github Repo', 'https://classroom.github.com/assignment-invitations/dac1c284e2bc3009bec4b0bc1f11bae4/status', FALSE, 12),
+        ('Github Repo', 'https://classroom.github.com/assignment-invitations/459318337a262cb1f9e442aa73b3fe3d/status ', FALSE, 13),
+        ('Github Repo', 'https://classroom.github.com/assignment-invitations/80348fe8b92c2043acba2abefb75c7f2/status ', FALSE, 14),
+        ('Github Repo', 'https://classroom.github.com/assignment-invitations/08f66ffe6766217da519d1edab21160e/status', FALSE, 15),
+        ('Github Repo', 'https://classroom.github.com/assignment-invitations/ac40e1254e39e18038cf31c3b6eea8a3/status', FALSE, 16),
+        ('Github Repo', 'https://classroom.github.com/assignment-invitations/d392eb09e16da5788e8a4bd5683642fa/status', FALSE, 17),
+        ('Github Repo', 'https://classroom.github.com/assignment-invitations/444ac17a45781a85594efadc50476d62/status', FALSE, 18),
+        ('Github Repo', 'https://classroom.github.com/assignment-invitations/862c3f912e73240c8301c585c334c8ac/status', FALSE, 19),
+        ('Github Repo', 'https://classroom.github.com/assignment-invitations/31ff8af8def12c790c089f34adef4782/status', FALSE, 20),
+        ('Github Repo', 'https://classroom.github.com/assignment-invitations/cda0651c9655f7c39b599f55bfd8af82/status', FALSE, 21),
+        ('Github Repo', 'https://classroom.github.com/assignment-invitations/49f51ad50a8889a138270df17c167ba1/status', FALSE, 22),
+        ('Github Repo', 'https://classroom.github.com/assignment-invitations/3abbd54a089d55a0c8f25565f193c3c5/status', FALSE, 23),
+        ('Github Repo', 'https://classroom.github.com/assignment-invitations/2b999d93f397073544695343b44fc460/status', FALSE, 24),
+        ('Github Repo', 'https://classroom.github.com/assignment-invitations/ccad26d2c97cce28b328bab7c54b9dce/status', FALSE, 25),
+        ('Github Repo', 'https://classroom.github.com/assignment-invitations/51804c6d2129d95c3bd9ab521e407be7/status', FALSE, 26);
     `);
 
     // Seed the comments table
