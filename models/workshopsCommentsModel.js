@@ -39,7 +39,7 @@ export async function createComment(req, res) {
     // Define the SQL query for inserting a new comment into the 'comments' table
     const queryText = `
       INSERT INTO comments (comment, added_date, workshop_id)
-      VALUES ($1, $2, $3)
+      VALUES ($1, $2)
       RETURNING *;
     `;
 
@@ -48,7 +48,7 @@ export async function createComment(req, res) {
     const result = await pool.query(queryText, [
       data.comment,
       data.added_date,
-      data.workshop_id,
+      // data.workshop_id,
     ]);
 
     // Send an HTTP response with a status code 201 (indicating successful resource creation)

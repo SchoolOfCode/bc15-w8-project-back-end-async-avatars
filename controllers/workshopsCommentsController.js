@@ -23,7 +23,7 @@ export async function createComment(req, res) {
   const data = req.body;
 
   // Call the 'createComment' function from the 'workshopsModel' with the extracted 'data', and await its result
-  const response = await workshopsModel.createComment(data);
+  const response = await workshopsCommentsModel.createComment(data);
 
   // Send an HTTP response with a status code 201 (indicating successful resource creation)
   // and a JSON response containing a success status and the 'response' data
