@@ -34,7 +34,8 @@ export async function getWorkshopsCommentsById(id) {
 export async function createComment(req, res) {
   try {
     // Extract the request body data and assign it to the 'data' variable
-    const data = req.body;
+    // const data = req.body;
+    // console.log("data",data)
 
     // Define the SQL query for inserting a new comment into the 'comments' table
     const queryText = `

@@ -19,6 +19,7 @@ export async function getWorkshopsCommentsById(req, res) {
 
 // Export an asynchronous function named createComment that handles comment creation
 export async function createComment(req, res) {
+  console.log('hi')
   // Extract the request body data and assign it to the 'data' variable
   const data = req.body;
 
