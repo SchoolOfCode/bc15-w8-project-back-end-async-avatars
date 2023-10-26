@@ -127,7 +127,7 @@ export async function resetDatabase() {
         ('Github Repo', 'https://classroom.github.com/assignment-invitations/d392eb09e16da5788e8a4bd5683642fa/status', FALSE, 18),
         ('Github Repo', 'https://classroom.github.com/assignment-invitations/444ac17a45781a85594efadc50476d62/status', FALSE, 19),
         ('Github Repo', 'https://classroom.github.com/assignment-invitations/862c3f912e73240c8301c585c334c8ac/status', FALSE, 20),
-        ('Github Repo', '...', FALSE, 21),
+        ('Github Repo - Coming Soon', '...', FALSE, 21),
         ('Github Repo', 'https://classroom.github.com/assignment-invitations/31ff8af8def12c790c089f34adef4782/status', FALSE, 22),
         ('Github Repo', 'https://classroom.github.com/assignment-invitations/cda0651c9655f7c39b599f55bfd8af82/status', FALSE, 23),
         ('Github Repo', 'https://classroom.github.com/assignment-invitations/49f51ad50a8889a138270df17c167ba1/status', FALSE, 24),
