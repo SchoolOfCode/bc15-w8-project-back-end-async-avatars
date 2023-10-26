@@ -45,7 +45,7 @@ async function resetDatabase() {
         CREATE TABLE comments (
           id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
           comment TEXT NOT NULL,
-          added_date DATE,
+          added_date DATE NOT NULL DEFAULT CURRENT_DATE,
           workshop_id INT REFERENCES workshops(id) ON DELETE CASCADE NOT NULL
         );
     `);

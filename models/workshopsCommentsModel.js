@@ -31,7 +31,7 @@ export async function getWorkshopsCommentsById(id) {
 }
 
 // Export an asynchronous function named createComment that handles comment creation
-export async function createComment(req, res) {
+export async function createComment(res, id, data) {
   try {
     // Extract the request body data and assign it to the 'data' variable
     // const data = req.body;
@@ -39,7 +39,7 @@ export async function createComment(req, res) {
 
     // Define the SQL query for inserting a new comment into the 'comments' table
     const queryText = `
-      INSERT INTO comments (comment, added_date, workshop_id)
+      INSERT INTO comments (comment, workshop_id)
       VALUES ($1, $2)
       RETURNING *;
     `;
@@ -48,8 +48,7 @@ export async function createComment(req, res) {
     // Parameterize the query to prevent SQL injection
     const result = await pool.query(queryText, [
       data.comment,
-      data.added_date,
-      // data.workshop_id,
+      id,
     ]);
 
     // Send an HTTP response with a status code 201 (indicating successful resource creation)
