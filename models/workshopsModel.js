@@ -18,9 +18,9 @@ export async function getWorkshops() {
 }
 
 export async function getWorkshopById(id) {
-  // Query the database and return the response with a matching id or null
+  // Query the database and return the comment with a matching id or null
 
-  // Define the SQL query to fetch the response with the specified id from the 'workshops' table
+  // Define the SQL query to fetch the comment with the specified id from the 'workshops' table
   const queryText = "SELECT * FROM workshops WHERE id = $1";
 
   // Use the pool object to send the query to the database
@@ -28,37 +28,37 @@ export async function getWorkshopById(id) {
   const result = await pool.query(queryText, [id]);
 
   // The rows property of the result object contains the retrieved records
-  // If a response with the specified id exists, it will be the first element in the rows array
-  // If no response exists with the specified id, the rows array will be empty
+  // If a comment with the specified id exists, it will be the first element in the rows array
+  // If no comment exists with the specified id, the rows array will be empty
   return result.rows[0] || null;
 }
 
-// export async function createResponse(response) {
-//   // Query the database to create a response and return the newly created response
+export async function createComment(comment) {
+  // Query the database to create a comment and return the newly created comment
 
-//   // Define the SQL query for inserting a new response into the 'workshops' table
-//   const queryText = `
-//       INSERT INTO workshops (cause, solution, error_id)
-//       VALUES ($1, $2, $3)
-//       RETURNING *;
-//     `;
+  // Define the SQL query for inserting a new comment into the 'workshops' table
+  const queryText = `
+      INSERT INTO workshops (cause, solution, error_id)
+      VALUES ($1)
+      RETURNING *;
+    `;
 
-//   // Use the pool object to send the query to the database
-//   // Parameterize the query to prevent SQL injection
-//   const result = await pool.query(queryText, [
-//     response.cause,
-//     response.solution,
-//     response.error_id,
-//   ]);
+  // Use the pool object to send the query to the database
+  // Parameterize the query to prevent SQL injection
+  const result = await pool.query(queryText, [
+    comment.cause,
+    comment.solution,
+    comment.error_id,
+  ]);
 
-//   // The rows property of the result object contains the inserted record
-//   return result.rows[0];
-// }
+  // The rows property of the result object contains the inserted record
+  return result.rows[0];
+}
 
-// export async function updateResponseById(id, updates) {
-//   // Query the database to update a response and return the newly updated response or null
+// export async function updatecommentById(id, updates) {
+//   // Query the database to update a comment and return the newly updated comment or null
 
-//   // Define the SQL query for updating the specified response in the 'workshops' table
+//   // Define the SQL query for updating the specified comment in the 'workshops' table
 //   const queryText = `
 //       UPDATE workshops
 //       SET cause = COALESCE($1, cause), solution = COALESCE($2, solution), error_id = COALESCE($3, error_id)
@@ -76,14 +76,14 @@ export async function getWorkshopById(id) {
 //   ]);
 
 //   // The rows property of the result object contains the updated record
-//   // If no response exists with the specified id, the rows array will be empty
+//   // If no comment exists with the specified id, the rows array will be empty
 //   return result.rows[0] || null;
 // }
 
-// export async function deleteResponseById(id) {
-//   // Query the database to delete a response and return the deleted response or null
+// export async function deletecommentById(id) {
+//   // Query the database to delete a comment and return the deleted comment or null
 
-//   // Define the SQL query for deleting the specified response from the 'workshops' table
+//   // Define the SQL query for deleting the specified comment from the 'workshops' table
 //   const queryText = `
 //       DELETE FROM workshops
 //       WHERE id = $1
@@ -97,6 +97,6 @@ export async function getWorkshopById(id) {
 //   console.log(result.rows[0]);
 
 //   // The rows property of the result object contains the deleted record
-//   // If no response exists with the specified id, the rows array will be empty
+//   // If no comment exists with the specified id, the rows array will be empty
 //   return result.rows[0] || null;
 // }
