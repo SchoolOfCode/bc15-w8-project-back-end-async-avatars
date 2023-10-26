@@ -1,6 +1,6 @@
 import { pool } from "../index.js";
 
-async function resetDatabase() {
+export async function resetDatabase() {
   try {
     // Drop existing tables if they exist
     await pool.query(`
@@ -94,8 +94,9 @@ async function resetDatabase() {
     console.error("Database reset failed: ", error);
   } finally {
     // End the pool
-    await pool.end();
+    // await pool.end();
   }
 }
 
 await resetDatabase();
+pool.end();
