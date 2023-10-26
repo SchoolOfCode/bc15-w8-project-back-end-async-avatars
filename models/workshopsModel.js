@@ -33,27 +33,7 @@ export async function getWorkshopById(id) {
   return result.rows[0] || null;
 }
 
-export async function createComment(comment) {
-  // Query the database to create a comment and return the newly created comment
 
-  // Define the SQL query for inserting a new comment into the 'workshops' table
-  const queryText = `
-      INSERT INTO workshops (cause, solution, error_id)
-      VALUES ($1)
-      RETURNING *;
-    `;
-
-  // Use the pool object to send the query to the database
-  // Parameterize the query to prevent SQL injection
-  const result = await pool.query(queryText, [
-    comment.cause,
-    comment.solution,
-    comment.error_id,
-  ]);
-
-  // The rows property of the result object contains the inserted record
-  return result.rows[0];
-}
 
 // export async function updatecommentById(id, updates) {
 //   // Query the database to update a comment and return the newly updated comment or null

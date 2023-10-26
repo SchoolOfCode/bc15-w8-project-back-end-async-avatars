@@ -16,7 +16,7 @@ workshopsRoutes.get("/:id/comments", workshopsCommentsController.getWorkshopsCom
 workshopsRoutes.get("/:id", workshopsController.getWorkshopById);
 
 
-workshopsRoutes.post("/:id/comments", workshopsController.createComment);
+workshopsRoutes.post("/comments", workshopsController.createComment);
 
 // workshopsRoutes.patch("/:id", workshopsController.updateResponseById);
 

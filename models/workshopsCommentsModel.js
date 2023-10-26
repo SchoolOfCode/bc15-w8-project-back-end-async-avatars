@@ -29,3 +29,25 @@ export async function getWorkshopsCommentsById(id) {
   // If no error exists with the specified id, the rows array will be empty
   return result.rows || null;
 }
+
+export async function createComment(comment) {
+  // Query the database to create a comment and return the newly created comment
+
+  // Define the SQL query for inserting a new comment into the 'workshops' table
+  const queryText = `
+      INSERT INTO comments (comment, added_date, workshop_id)
+      VALUES ($1, $2, $3)
+      RETURNING *;
+    `;
+
+  // Use the pool object to send the query to the database
+  // Parameterize the query to prevent SQL injection
+  const result = await pool.query(queryText, [
+    comment.comment,
+    comment.added_date,
+    comment.workshop_id,
+  ]);
+
+  // The rows property of the result object contains the inserted record
+  return result.rows[0];
+}
