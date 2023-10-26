@@ -30,24 +30,32 @@ export async function getWorkshopsCommentsById(id) {
   return result.rows || null;
 }
 
-export async function createComment(comment) {
-  // Query the database to create a comment and return the newly created comment
+// Export an asynchronous function named createComment that handles comment creation
+export async function createComment(req, res) {
+  try {
+    // Extract the request body data and assign it to the 'data' variable
+    const data = req.body;
 
-  // Define the SQL query for inserting a new comment into the 'workshops' table
-  const queryText = `
+    // Define the SQL query for inserting a new comment into the 'comments' table
+    const queryText = `
       INSERT INTO comments (comment, added_date, workshop_id)
       VALUES ($1, $2, $3)
       RETURNING *;
     `;
 
-  // Use the pool object to send the query to the database
-  // Parameterize the query to prevent SQL injection
-  const result = await pool.query(queryText, [
-    comment.comment,
-    comment.added_date,
-    comment.workshop_id,
-  ]);
+    // Use the pool object to send the query to the database
+    // Parameterize the query to prevent SQL injection
+    const result = await pool.query(queryText, [
+      data.comment,
+      data.added_date,
+      data.workshop_id,
+    ]);
 
-  // The rows property of the result object contains the inserted record
-  return result.rows[0];
+    // Send an HTTP response with a status code 201 (indicating successful resource creation)
+    // and a JSON response containing a success status and the newly created comment
+    res.status(201).json({ status: "success", data: result.rows[0] });
+  } catch (error) {
+    // Handle errors and send an appropriate response
+    res.status(500).json({ status: "error", message: "Failed to create comment" });
+  }
 }
