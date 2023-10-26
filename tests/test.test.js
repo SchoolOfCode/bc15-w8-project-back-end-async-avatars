@@ -4,7 +4,7 @@ import supertest from "supertest";
 import { app } from "../app.js";
 import { pool } from "../db/index.js";
 import { resetDatabase } from "../db/scripts/reset-database.js";
-q
+
 // beforeEach(async () => {
 //   await resetDatabase();
 // });
