@@ -54,9 +54,9 @@ export async function resetDatabase() {
     await pool.query(`
       INSERT INTO weeks (description)
       VALUES
-      ('Week 1  - Computational Thinking'),
-      ('Week 2  - JS Foundations'),
-      ('Week 3  - Front-End Foundations'),
+      ('Week 1 - Computational Thinking'),
+      ('Week 2 - JS Foundations'),
+      ('Week 3 - Front-End Foundations'),
       ('Week 4 - Back-End'),
       ('Week 5 - Databases'),
       ('Week 6 - Testing'),
