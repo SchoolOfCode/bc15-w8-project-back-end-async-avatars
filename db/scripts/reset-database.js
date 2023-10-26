@@ -74,9 +74,9 @@ export async function resetDatabase() {
         VALUES
         ('Workshop 1 - Romeo and Juligit', 'Description Placeholder', '2023-09-07', 1),
         ('Hackathon - Escape Room on Scratch', 'Description Placeholder', '2023-09-08', 1),
-        ('Workshop 1 - Intro to Javascript', 'This workshop will teach core JS concepts to get you started. We''ll cover the key building blocks before applying JS to dynamic web apps.Get ready to level up your JS skills!', '2023-09-12', 2),
-        ('Workshop 2 - Loops', 'This workshop will explore what loops are, why we use them and how we write them. ', '2023-09-12', 2),
-        ('Workshop 3 - Functions and Scope', 'We''ve reached a point where we want to be able to reuse what we''re creating so that we don't have to write the same bits of code over and over again or our code is becoming a bit more complex and longer, and so we can simplify and hide details - that''s where functions come in', '2023-09-13', 2),
+        ('Workshop 1 - Intro to Javascript', 'This workshop will teach core JS concepts to get you started. We''ll cover the key building blocks before applying JS to dynamic web apps. Get ready to level up your JS skills!', '2023-09-12', 2),
+        ('Workshop 2 - Loops', 'This workshop will explore what loops are, why we use them and how we write them.', '2023-09-12', 2),
+        ('Workshop 3 - Functions and Scope', 'We''ve reached a point where we want to be able to reuse what we''re creating so that we don''t have to write the same bits of code over and over again or our code is becoming a bit more complex and longer, and so we can simplify and hide details - that''s where functions come in', '2023-09-13', 2),
         ('Workshop 4 - Arrays', 'Arrays let you store multiple values (of any type) in a flexible, ordered list.', '2023-09-13', 2),
         ('Workshop 5 - Array Methods and Callbacks', 'Array methods are handy tools in JavaScript for working with array data. These methods allow you to loop through an array and perform an action on each element.', '2023-09-14', 2),
         ('Workshop 6 - Objects', 'Objects store collections of keyed values, useful for representing real-world entities with many characteristics.', '2023-09-14', 2),
@@ -95,13 +95,11 @@ export async function resetDatabase() {
         ('Workshop 1 - SQL Practice', 'Navigate to the ElephantSQL website and create a new Postgres database.', '2023-10-04', 5),
         ('Workshop 2 - REST Express', 'The requirements have changed since yesterday. Now a single book can only have one author.', '2023-10-05', 5),
         ('Hackathon - Build a REST API with Postgres', 'Build your own Postgres Database with as many tables and relationships as you like', '2023-10-06', 5),
-        ('Workshop 1 - Unit Testing', 'In this workshop, we'll learn unit testing - testing small units of logic in isolation. We''ll use Vitest for easier test writing and running.', '2023-10-09', 6),
+        ('Workshop 1 - Unit Testing', 'In this workshop, we''ll learn unit testing - testing small units of logic in isolation. We''ll use Vitest for easier test writing and running.', '2023-10-09', 6),
         ('Workshop 2 - Test Driven Development', 'Test driven development means writing tests first, before writing code. The tests define what the code should do. Then you write code to pass the tests.', '2023-10-10', 6),
-        ('Workshop 3 - End-to-End Testing', 'In this workshop, we'll learn end-to-end testing with Playwright. Playwright makes it easy to automate and test real browser interactions with the UI and functionality of web apps. We''ll use Playwright to write scripts that simulate user flows. This will test our app fully from end-to-end.', '2023-10-11', 6),
-        ('Workshop 4 - API Testing with Supertest', 'As the information served by an API becomes critical and other software comes to rely on it, developers need confidence that the API works as expected (and doesn''t for example fail to respond or respond with missing or incorrect data).', '2023-10-12', 6),
+        ('Workshop 3 - End-to-End Testing', 'In this workshop, we''ll learn end-to-end testing with Playwright. Playwright makes it easy to automate and test real browser interactions with the UI and functionality of web apps. We''ll use Playwright to write scripts that simulate user flows. This will test our app fully from end-to-end.', '2023-10-11', 6),
+        ('Workshop 4 - API Testing with Supertest', 'As the information served by an API becomes critical and other software comes to rely on it, developers need confidence that the API works as expected and doesn''t for example fail to respond or respond with missing or incorrect data.', '2023-10-12', 6),
         ('Hackathon - Testathon', 'You''ll be writing a full test suite for an app that we have built', '2023-10-13', 6);
-
-        ;
     `);
 
     // Seed the bookmarks table
