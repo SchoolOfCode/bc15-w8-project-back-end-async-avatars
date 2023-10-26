@@ -30,7 +30,7 @@ test("GET /workshops all workshops works", async () => {
 //   expect(response.body.success).toBe(true);
 //   //      assert that response body.payload is an array
 //   console.log(response.body.payload);
-  console.log(response);q
+  console.log(response);
   expect(Array.isArray(response.body.data)).toBe(true);
 //   //      loop over the payload array. for each user object in the payload array:
 //   //          assert that user object.id is a number
