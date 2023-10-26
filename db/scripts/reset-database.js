@@ -72,8 +72,8 @@ export async function resetDatabase() {
     await pool.query(`
         INSERT INTO workshops (name, description, date, week_id)
         VALUES
-        ('Workshop 1 - Romeo and Juligit', 'Description Placeholder', '2023-09-07', 1),
-        ('Hackathon - Escape Room on Scratch', 'Description Placeholder', '2023-09-08', 1),
+        ('Workshop 1 - Romeo and Juligit', 'Before you know it, the add/commit/push/pull rhythm will become second nature, but to get there, we need to practice.', '2023-09-07', 1),
+        ('Hackathon - Escape Room on Scratch', 'You will be building an escape room using Scratch', '2023-09-08', 1),
         ('Workshop 1 - Intro to Javascript', 'This workshop will teach core JS concepts to get you started. We''ll cover the key building blocks before applying JS to dynamic web apps. Get ready to level up your JS skills!', '2023-09-12', 2),
         ('Workshop 2 - Loops', 'This workshop will explore what loops are, why we use them and how we write them.', '2023-09-12', 2),
         ('Workshop 3 - Functions and Scope', 'We''ve reached a point where we want to be able to reuse what we''re creating so that we don''t have to write the same bits of code over and over again or our code is becoming a bit more complex and longer, and so we can simplify and hide details - that''s where functions come in', '2023-09-13', 2),
