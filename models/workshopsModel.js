@@ -5,7 +5,7 @@ export async function getWorkshops() {
   // Query the database and return all workshops
 
   // Define the SQL query to fetch all workshops from the 'workshops' table
-  const queryText = `SELECT workshops.id, name as workshop_name, weeks.description as week_name, date 
+  const queryText = `SELECT workshops.id, name as workshop_name, weeks.description as week_name, date
                      FROM workshops, weeks
                      WHERE workshops.week_id = weeks.id
                      ORDER BY date, weeks.description, workshops.name`;

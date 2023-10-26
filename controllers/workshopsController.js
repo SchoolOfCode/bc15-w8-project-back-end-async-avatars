@@ -17,17 +17,6 @@ export async function getWorkshopById(req, res) {
   res.status(200).json({ status: "success", data: response });
 }
 
-// Export an asynchronous function named createComment that handles comment creation
-export async function createComment(req, res) {
-  // Extract the request body data and assign it to the 'data' variable
-  const data = req.body;
-
-  // Call the 'createComment' function from the 'workshopsModel' with the extracted 'data', and await its result
-  const response = await workshopsModel.createComment(data);
-
-  // Send an HTTP response with a status code 201 (indicating successful resource creation)
-  // and a JSON response containing a success status and the 'response' data
-  res.status(201).json({ status: "success", data: response });}
 
 // export async function updateResponseById(req, res) {
 //   const id = req.params.id;
