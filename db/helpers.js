@@ -110,6 +110,7 @@ export async function resetDatabase() {
         ('Scratch Link', 'https://scratch.mit.edu/', TRUE, 2),
         ('Github Repo', 'https://classroom.github.com/assignment-invitations/a07a0a01cd8851bcc1f7906537b2524e/status', FALSE, 3),
         ('Github Repo', 'https://classroom.github.com/assignment-invitations/0e8d8bb3bbb7669fc4bf6d290bb462b8/status', FALSE, 4),
+        ('For Loops', 'https://www.w3schools.com/js/js_loop_for.asp', TRUE, 4),
         ('Github Repo', 'https://classroom.github.com/a/SsLRxarN', FALSE, 5),
         ('Github Repo', 'https://classroom.github.com/a/HNOpMWtV', FALSE, 6),
         ('Github Repo', 'https://classroom.github.com/a/21V5lQcj', FALSE, 7),
