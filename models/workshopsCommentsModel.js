@@ -18,7 +18,10 @@ export async function getWorkshopsCommentsById(id) {
   // Query the database and return the error with a matching id or null
 
   // Define the SQL query to fetch the error with the specified id from the 'errors' table with matching responses
-  const queryText = "SELECT * FROM workshops, comments WHERE workshops.id = comments.workshop_id AND workshops.id = $1";
+  const queryText = `SELECT * FROM workshops, comments 
+                     WHERE workshops.id = comments.workshop_id 
+                     AND workshops.id = $1
+                     ORDER BY added_date`;
 
   // Use the pool object to send the query to the database
   // passing the id as a parameter to prevent SQL injection
