@@ -10,10 +10,9 @@ export const app = express();
 
 // Configure Cross-Origin Resource Sharing (CORS) for the application
 app.use(
-    cors({
-        origin: "http://127.0.0.1:5500",  // Allow requests from this origin
-        methods: ["GET", "POST", "DELETE", "PATCH"],  // Allow specified HTTP methods
-    })
+    cors(
+
+    )
 );
 
 // Use the Morgan middleware for request logging in 'dev' format
