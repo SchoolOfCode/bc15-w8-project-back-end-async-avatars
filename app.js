@@ -9,11 +9,11 @@ import { workshopsRoutes } from "./routes/workshopsRoutes.js";  // Import the ro
 export const app = express();
 
 // Configure Cross-Origin Resource Sharing (CORS) for the application
-app.use(
-    cors(
+// app.use(
+//     cors(
 
-    )
-);
+//     )
+// );
 
 // Use the Morgan middleware for request logging in 'dev' format
 app.use(morgan("dev"));
